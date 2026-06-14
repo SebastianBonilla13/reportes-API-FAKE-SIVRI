@@ -1,0 +1,225 @@
+openapi: 3.0.3
+info:
+  title: SIVRI Reportes Estadísticos API
+  version: 1.0.0
+
+paths:
+  /reportes-estadisticos/tipos-disponibles:
+    get:
+      summary: Obtener catálogo de reportes disponibles
+      operationId: obtenerTiposDisponibles
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseReportes'
+
+  /reportes-estadisticos/{codigo}/listar-datos-reporte:
+    post:
+      summary: Consultar datos de un reporte
+      operationId: listarDatosReporte
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          schema:
+            type: string
+            example: R01
+        - name: pageNo
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 0
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 10
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FiltrosReporteRequest'
+      responses:
+        '200':
+          description: Datos paginados del reporte
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseReportePaginado'
+
+  /reportes-estadisticos/{codigo}/generar:
+    post:
+      summary: Generar y descargar archivo del reporte
+      operationId: generarReporte
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          schema:
+            type: string
+            example: R02
+        - name: formato
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [pdf, excel]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FiltrosReporteRequest'
+      responses:
+        '200':
+          description: Archivo generado
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                type: string
+                format: binary
+
+#----
+
+components:
+  schemas:
+    ApiResponseReportes:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        userMessage:
+          type: string
+          example: Ok
+        developerMessage:
+          type: string
+          example: ""
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReporteMetadata'
+
+    ApiResponseReportePaginado:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        userMessage:
+          type: string
+          example: Ok
+        developerMessage:
+          type: string
+          example: ""
+        data:
+          $ref: '#/components/schemas/PageReporteData'
+
+    ReporteMetadata:
+      type: object
+      properties:
+        id:
+          type: integer
+        codigo:
+          type: string
+        titulo:
+          type: string
+        descripcion:
+          type: string
+        columnasIncluidas:
+          type: array
+          items:
+            type: string
+        filtrosDisponibles:
+          type: array
+          items:
+            $ref: '#/components/schemas/FiltroDisponible'
+        estadisticas:
+          type: array
+          items:
+            type: string
+        formato:
+          type: array
+          items:
+            type: string
+
+    FiltroDisponible:
+      type: object
+      properties:
+        nombre:
+          type: string
+        tipo:
+          type: string
+          enum: [input, combobox, date]
+
+    FiltrosReporteRequest:
+      type: object
+      properties:
+        filtros:
+          type: object
+          additionalProperties: true
+
+
+    GenerarReporteRequest:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+
+    PageReporteData:
+      type: object
+      properties:
+        content:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pageable:
+          $ref: '#/components/schemas/Pageable'
+        totalElements:
+          type: integer
+        totalPages:
+          type: integer
+        number:
+          type: integer
+        size:
+          type: integer
+        first:
+          type: boolean
+        last:
+          type: boolean
+        numberOfElements:
+          type: integer
+        empty:
+          type: boolean
+
+    Pageable:
+      type: object
+      properties:
+        pageNumber:
+          type: integer
+        pageSize:
+          type: integer
+        offset:
+          type: integer
+        paged:
+          type: boolean
+        unpaged:
+          type: boolean

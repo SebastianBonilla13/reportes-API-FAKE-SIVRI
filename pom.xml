@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.6</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>edu.unicauca</groupId>
+    <artifactId>api-fake-report</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <!-- ===================== DEPENDENCIAS ===================== -->
+    <dependencies>
+
+        <!-- Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Validaciones -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- OpenAPI annotations -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations-jakarta</artifactId>
+            <version>2.2.22</version>
+        </dependency>
+
+        <!-- SOLO si usas JsonNullable (opcional si desactivas openApiNullable) -->
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>0.2.6</version>
+        </dependency>
+
+        <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.34</version>
+    <scope>provided</scope>
+</dependency>
+
+    </dependencies>
+
+    <!-- ===================== BUILD ===================== -->
+    <build>
+
+        <plugins>
+
+            <!-- 🔥 GENERADOR OPENAPI -->
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>7.5.0</version>
+
+                <executions>
+                    <execution>
+                        <id>generate-api</id>
+                        <phase>generate-sources</phase>
+
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+
+                            <apiPackage>com.sivri.report.api</apiPackage>
+                            <modelPackage>com.sivri.report.model</modelPackage>
+
+                            <output>${project.build.directory}/generated-sources/openapi</output>
+
+                            <configOptions>
+                                <interfaceOnly>true</interfaceOnly>
+                                <useSpringBoot3>true</useSpringBoot3>
+                                <useJakartaEe>true</useJakartaEe>
+                                <dateLibrary>java8</dateLibrary>
+
+                                <!-- 🔥 CLAVE: evita JsonNullable -->
+                                <openApiNullable>false</openApiNullable>
+                            </configOptions>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 🔥 HACER QUE MAVEN RECONOZCA LAS CLASES GENERADAS -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.5.0</version>
+
+                <executions>
+                    <execution>
+                        <id>add-openapi-generated-sources</id>
+                        <phase>generate-sources</phase>
+
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+
+                        <configuration>
+                            <sources>
+                                <source>
+                                    ${project.build.directory}/generated-sources/openapi/src/main/java
+                                </source>
+                            </sources>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
