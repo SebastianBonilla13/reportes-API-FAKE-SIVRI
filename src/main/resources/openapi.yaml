@@ -172,6 +172,13 @@ components:
         filtros:
           type: object
           additionalProperties: true
+          nullable: true
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+          nullable: true
 
 
     GenerarReporteRequest:

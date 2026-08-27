@@ -1,3 +1,6 @@
 spring:
   application:
     name: api-fake-report
+
+server:
+  port: 8082

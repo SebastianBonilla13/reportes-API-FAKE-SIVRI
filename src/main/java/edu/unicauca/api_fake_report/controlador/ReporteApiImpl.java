@@ -14,7 +14,9 @@ import org.springframework.web.client.RestTemplate;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 public class ReporteApiImpl implements ReportesEstadisticosApi {
     private final ObjectMapper mapper = new ObjectMapper();
@@ -43,61 +45,6 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
         }
     }
 
-    /*
-     * @Override
-     * public ResponseEntity<ApiResponseReportePaginado> listarDatosReporte(
-     * String codigo,
-     * Integer pageNo,
-     * Integer pageSize,
-     * FiltrosReporteRequest filtrosReporteRequest) {
-     * System.out.println("Código reporte recibido: " + codigo);
-     * System.out.println("Página recibida: " + pageNo);
-     * System.out.println("Tamaño página recibido: " + pageSize);
-     * System.out.println("Filtros recibidos: " + filtrosReporteRequest);
-     * 
-     * int page = pageNo != null ? pageNo : 0;
-     * int size = pageSize != null ? pageSize : 10;
-     * 
-     * // List<Map<String, Object>> dataQuemada = obtenerDataQuemada(codigo);
-     * 
-     * List<Map<String, Object>> dataQuemada = aplicarFiltros(
-     * obtenerDataQuemada(codigo),
-     * filtrosReporteRequest);
-     * 
-     * int total = dataQuemada.size();
-     * int start = Math.min(page * size, total);
-     * int end = Math.min(start + size, total);
-     * 
-     * List<Map<String, Object>> content = dataQuemada.subList(start, end);
-     * 
-     * Pageable pageable = new Pageable();
-     * pageable.setPageNumber(page);
-     * pageable.setPageSize(size);
-     * pageable.setOffset(start);
-     * pageable.setPaged(true);
-     * pageable.setUnpaged(false);
-     * 
-     * PageReporteData pageData = new PageReporteData();
-     * pageData.setContent(content);
-     * pageData.setPageable(pageable);
-     * pageData.setTotalElements(total);
-     * pageData.setTotalPages((int) Math.ceil((double) total / size));
-     * pageData.setNumber(page);
-     * pageData.setSize(size);
-     * pageData.setFirst(page == 0);
-     * pageData.setLast(end >= total);
-     * pageData.setNumberOfElements(content.size());
-     * pageData.setEmpty(content.isEmpty());
-     * 
-     * ApiResponseReportePaginado response = new ApiResponseReportePaginado();
-     * response.setStatus(200);
-     * response.setUserMessage("Ok");
-     * response.setDeveloperMessage("");
-     * response.setData(pageData);
-     * 
-     * return ResponseEntity.ok(response);
-     * }
-     */
     @Override
     public ResponseEntity<ApiResponseReportePaginado> listarDatosReporte(
             String codigo,
@@ -153,23 +100,37 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
     public ResponseEntity<Resource> generarReporte(
             String codigo,
             String formato,
-            FiltrosReporteRequest filtrosReporteRequest) {
+            FiltrosReporteRequest request) { // Renombrado a 'request' por legibilidad
 
         try {
-            List<Map<String, Object>> dataCompletaFiltrada = aplicarFiltros(
-                    obtenerDataQuemada(codigo),
-                    filtrosReporteRequest);
+            
+            List<Map<String, Object>> dataFuente;
 
+            // 1. DETERMINAR LA FUENTE DE DATOS:
+            // Si el request contiene 'data', esa es nuestra fuente. Si no, usamos la data quemada.
+            if (request != null && request.getData() != null && !request.getData().isEmpty()) {
+                dataFuente = request.getData();
+            } else {
+                dataFuente = obtenerDataQuemada(codigo);
+            }
+
+            // 2. APLICAR FILTROS A LA FUENTE DE DATOS:
+            List<Map<String, Object>> dataFinal = aplicarFiltros(dataFuente, request);
+
+            // 3. PREPARAR PETICIÓN AL MICROSERVICIO:
             ReporteExternoRequest requestExterno = new ReporteExternoRequest();
             requestExterno.setTipoReporte(codigo);
             requestExterno.setFormato(formato);
-            requestExterno.setData(dataCompletaFiltrada);
+            requestExterno.setData(dataFinal); // Pasamos la data final (obtenida del body y filtrada)
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
 
+            log.info("REQUEST: {}", requestExterno);
+
             HttpEntity<ReporteExternoRequest> entity = new HttpEntity<>(requestExterno, headers);
 
+            // 4. EJECUTAR REST TEMPLATE:
             ResponseEntity<byte[]> responseExterno = restTemplate.exchange(
                     "http://localhost:8081/reportes/generar",
                     HttpMethod.POST,
@@ -188,7 +149,7 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
                 contentType = "pdf".equalsIgnoreCase(formato)
                         ? MediaType.APPLICATION_PDF
                         : MediaType.parseMediaType(
-                                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             }
 
             String extension = "pdf".equalsIgnoreCase(formato) ? "pdf" : "xlsx";
@@ -202,16 +163,19 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
                     .body(new ByteArrayResource(archivo));
 
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Error generando reporte: ", e);
             return ResponseEntity.internalServerError().build();
         }
     }
 
     private List<Map<String, Object>> obtenerDataQuemada(String codigo) {
+        // Futura rpta SQL to json
         String archivo = switch (codigo.toUpperCase()) {
             case "R01" -> "datos-reporte-r01.json";
             case "R02" -> "datos-reporte-r02.json";
-            default -> "datos-reporte-r01.json";
+            case "VIG" -> "vigencia-v1.json";
+
+            default -> "aaa";
         };
 
         try (InputStream inputStream = new ClassPathResource(archivo).getInputStream()) {
@@ -222,14 +186,6 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
         } catch (Exception e) {
             throw new RuntimeException("Error leyendo archivo de datos quemados: " + archivo, e);
         }
-    }
-
-    private byte[] generarPdfFake(String codigo) {
-        return ("PDF FAKE DEL REPORTE " + codigo).getBytes(StandardCharsets.UTF_8);
-    }
-
-    private byte[] generarExcelFake(String codigo) {
-        return ("EXCEL FAKE DEL REPORTE " + codigo).getBytes(StandardCharsets.UTF_8);
     }
 
     private List<Map<String, Object>> aplicarFiltros(

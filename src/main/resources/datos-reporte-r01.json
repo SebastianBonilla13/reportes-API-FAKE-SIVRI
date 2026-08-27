@@ -9,10 +9,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Big Data"
-    ],
+    "lineasInvestigacion": "Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2020-03-24",
@@ -28,10 +25,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "Redes",
-      "IoT"
-    ],
+    "lineasInvestigacion": "Redes",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2020-04-17",
@@ -47,10 +41,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Automatización",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Automatización",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2020-12-14",
@@ -66,10 +57,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Biomasa",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Biomasa",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2021-06-20",
@@ -85,10 +73,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Genética",
-      "Bioinformática"
-    ],
+    "lineasInvestigacion": "Genética, Bioinformática",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2023-06-19",
@@ -104,10 +89,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Producción Sostenible"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Producción Sostenible",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2022-05-15",
@@ -123,10 +105,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Prevención",
-      "Salud Digital"
-    ],
+    "lineasInvestigacion": "Prevención, Salud Digital",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2024-03-18",
@@ -142,10 +121,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "Machine Learning, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2020-01-26",
@@ -161,10 +137,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Analítica Predictiva"
-    ],
+    "lineasInvestigacion": "Minería de Datos, Analítica Predictiva",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2024-08-05",
@@ -180,10 +153,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "Redes"
-    ],
+    "lineasInvestigacion": "5G, Redes",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2020-03-17",
@@ -199,10 +169,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Robótica Móvil"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Robótica Móvil",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2022-10-03",
@@ -218,10 +185,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Biomasa",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Biomasa, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2023-05-25",
@@ -237,10 +201,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Bioinformática",
-      "Genética"
-    ],
+    "lineasInvestigacion": "Bioinformática, Genética",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2020-09-04",
@@ -256,10 +217,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Producción Sostenible",
-      "Agrotecnología"
-    ],
+    "lineasInvestigacion": "Producción Sostenible, Agrotecnología",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2023-01-20",
@@ -275,10 +233,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Salud Digital",
-      "Epidemiología"
-    ],
+    "lineasInvestigacion": "Salud Digital, Epidemiología",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2023-02-03",
@@ -294,10 +249,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Visión Artificial",
-      "Machine Learning"
-    ],
+    "lineasInvestigacion": "Visión Artificial, Machine Learning",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2020-05-17",
@@ -313,10 +265,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Analítica Predictiva",
-      "Big Data"
-    ],
+    "lineasInvestigacion": "Analítica Predictiva, Big Data",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2023-08-04",
@@ -332,10 +281,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "IoT"
-    ],
+    "lineasInvestigacion": "5G, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2019-12-21",
@@ -351,10 +297,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Robótica Móvil",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Robótica Móvil, Sistemas Embebidos",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2024-08-07",
@@ -370,10 +313,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Biomasa",
-      "Eficiencia Energética"
-    ],
+    "lineasInvestigacion": "Biomasa, Eficiencia Energética",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2019-02-22",
@@ -389,10 +329,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Genética",
-      "Microbiología"
-    ],
+    "lineasInvestigacion": "Genética, Microbiología",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2022-12-11",
@@ -408,10 +345,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Cadena de Suministro",
-      "Producción Sostenible"
-    ],
+    "lineasInvestigacion": "Cadena de Suministro, Producción Sostenible",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2022-04-28",
@@ -427,10 +361,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Prevención",
-      "Epidemiología"
-    ],
+    "lineasInvestigacion": "Prevención, Epidemiología",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2020-03-14",
@@ -446,10 +377,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Visión Artificial",
-      "NLP"
-    ],
+    "lineasInvestigacion": "Visión Artificial, NLP",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2021-08-10",
@@ -465,10 +393,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Big Data",
-      "Minería de Datos"
-    ],
+    "lineasInvestigacion": "Big Data, Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2019-10-24",
@@ -484,10 +409,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "Redes"
-    ],
+    "lineasInvestigacion": "5G, Redes",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2023-02-28",
@@ -503,10 +425,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Robótica Móvil",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Robótica Móvil, Sistemas Embebidos",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2023-01-20",
@@ -522,10 +441,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Solar",
-      "Eficiencia Energética"
-    ],
+    "lineasInvestigacion": "Solar, Eficiencia Energética",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2021-07-05",
@@ -541,10 +457,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Genética",
-      "Bioinformática"
-    ],
+    "lineasInvestigacion": "Genética, Bioinformática",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2023-04-17",
@@ -560,10 +473,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Cadena de Suministro",
-      "Agrotecnología"
-    ],
+    "lineasInvestigacion": "Cadena de Suministro, Agrotecnología",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2023-12-10",
@@ -579,10 +489,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Salud Digital",
-      "Epidemiología"
-    ],
+    "lineasInvestigacion": "Salud Digital, Epidemiología",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2019-12-18",
@@ -598,10 +505,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "NLP",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "NLP, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2022-05-28",
@@ -617,10 +521,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Analítica Predictiva",
-      "Big Data"
-    ],
+    "lineasInvestigacion": "Analítica Predictiva, Big Data",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2024-05-06",
@@ -636,10 +537,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "IoT"
-    ],
+    "lineasInvestigacion": "5G, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2019-06-19",
@@ -655,10 +553,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Robótica Móvil",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Robótica Móvil, Sistemas Embebidos",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2024-04-22",
@@ -674,10 +569,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2022-01-06",
@@ -693,10 +585,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Microbiología",
-      "Genética"
-    ],
+    "lineasInvestigacion": "Microbiología, Genética",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2019-08-08",
@@ -712,10 +601,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Cadena de Suministro",
-      "Agrotecnología"
-    ],
+    "lineasInvestigacion": "Cadena de Suministro, Agrotecnología",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2021-05-28",
@@ -731,10 +617,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Prevención",
-      "Salud Digital"
-    ],
+    "lineasInvestigacion": "Prevención, Salud Digital",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2020-10-09",
@@ -750,10 +633,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "Machine Learning, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2023-04-09",
@@ -769,10 +649,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Analítica Predictiva"
-    ],
+    "lineasInvestigacion": "Minería de Datos, Analítica Predictiva",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2021-10-11",
@@ -788,10 +665,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "IoT",
-      "5G"
-    ],
+    "lineasInvestigacion": "IoT, 5G",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2021-09-05",
@@ -807,10 +681,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Automatización"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Automatización",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2021-04-14",
@@ -826,10 +697,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Solar",
-      "Biomasa"
-    ],
+    "lineasInvestigacion": "Solar, Biomasa",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2019-05-17",
@@ -845,10 +713,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Bioinformática",
-      "Genética"
-    ],
+    "lineasInvestigacion": "Bioinformática, Genética",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2019-04-16",
@@ -864,10 +729,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Producción Sostenible"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Producción Sostenible",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2020-11-23",
@@ -883,10 +745,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Prevención",
-      "Salud Digital"
-    ],
+    "lineasInvestigacion": "Prevención, Salud Digital",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2023-04-28",
@@ -902,10 +761,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "NLP"
-    ],
+    "lineasInvestigacion": "Machine Learning, NLP",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2022-03-24",
@@ -921,10 +777,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Analítica Predictiva",
-      "Minería de Datos"
-    ],
+    "lineasInvestigacion": "Analítica Predictiva, Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2022-02-23",
@@ -940,10 +793,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "IoT",
-      "Redes"
-    ],
+    "lineasInvestigacion": "IoT, Redes",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2022-12-05",
@@ -959,10 +809,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Automatización"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Automatización",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2022-07-25",
@@ -978,10 +825,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Biomasa",
-      "Eficiencia Energética"
-    ],
+    "lineasInvestigacion": "Biomasa, Eficiencia Energética",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2023-12-24",
@@ -997,10 +841,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Microbiología",
-      "Genética"
-    ],
+    "lineasInvestigacion": "Microbiología, Genética",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2024-11-26",
@@ -1016,10 +857,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Cadena de Suministro"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Cadena de Suministro",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2024-07-05",
@@ -1035,10 +873,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Epidemiología",
-      "Prevención"
-    ],
+    "lineasInvestigacion": "Epidemiología, Prevención",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2021-07-09",
@@ -1054,10 +889,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "Machine Learning, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2020-11-03",
@@ -1073,10 +905,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Analítica Predictiva",
-      "Minería de Datos"
-    ],
+    "lineasInvestigacion": "Analítica Predictiva, Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2024-02-19",
@@ -1092,10 +921,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "Redes",
-      "IoT"
-    ],
+    "lineasInvestigacion": "Redes, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2021-02-19",
@@ -1111,10 +937,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Automatización"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Automatización",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2023-12-27",
@@ -1130,10 +953,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Biomasa",
-      "Eficiencia Energética"
-    ],
+    "lineasInvestigacion": "Biomasa, Eficiencia Energética",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2021-02-17",
@@ -1149,10 +969,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Bioinformática",
-      "Microbiología"
-    ],
+    "lineasInvestigacion": "Bioinformática, Microbiología",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2022-12-05",
@@ -1168,10 +985,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Producción Sostenible"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Producción Sostenible",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2023-05-11",
@@ -1187,10 +1001,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Epidemiología",
-      "Prevención"
-    ],
+    "lineasInvestigacion": "Epidemiología, Prevención",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2019-08-28",
@@ -1206,10 +1017,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "Machine Learning, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2024-05-18",
@@ -1225,10 +1033,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Big Data",
-      "Minería de Datos"
-    ],
+    "lineasInvestigacion": "Big Data, Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2022-11-23",
@@ -1244,10 +1049,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "Redes",
-      "IoT"
-    ],
+    "lineasInvestigacion": "Redes, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2020-05-22",
@@ -1263,10 +1065,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Automatización",
-      "Robótica Móvil"
-    ],
+    "lineasInvestigacion": "Automatización, Robótica Móvil",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2024-08-09",
@@ -1282,10 +1081,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Biomasa"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Biomasa",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2020-12-16",
@@ -1301,10 +1097,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Genética",
-      "Microbiología"
-    ],
+    "lineasInvestigacion": "Genética, Microbiología",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2021-03-10",
@@ -1320,10 +1113,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Producción Sostenible",
-      "Agrotecnología"
-    ],
+    "lineasInvestigacion": "Producción Sostenible, Agrotecnología",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2020-11-28",
@@ -1339,10 +1129,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Epidemiología",
-      "Prevención"
-    ],
+    "lineasInvestigacion": "Epidemiología, Prevención",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2020-01-09",
@@ -1358,10 +1145,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Visión Artificial",
-      "NLP"
-    ],
+    "lineasInvestigacion": "Visión Artificial, NLP",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2020-10-10",
@@ -1377,10 +1161,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Big Data"
-    ],
+    "lineasInvestigacion": "Minería de Datos, Big Data",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2022-05-28",
@@ -1396,10 +1177,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "Redes"
-    ],
+    "lineasInvestigacion": "5G, Redes",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2024-02-06",
@@ -1415,10 +1193,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Robótica Móvil",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Robótica Móvil, Sistemas Embebidos",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2023-08-10",
@@ -1434,10 +1209,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2024-10-22",
@@ -1453,10 +1225,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Bioinformática",
-      "Microbiología"
-    ],
+    "lineasInvestigacion": "Bioinformática, Microbiología",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2019-03-26",
@@ -1472,10 +1241,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Cadena de Suministro"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Cadena de Suministro",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2021-12-13",
@@ -1491,10 +1257,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Epidemiología",
-      "Salud Digital"
-    ],
+    "lineasInvestigacion": "Epidemiología, Salud Digital",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2024-06-20",
@@ -1510,10 +1273,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Visión Artificial",
-      "NLP"
-    ],
+    "lineasInvestigacion": "Visión Artificial, NLP",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2022-09-21",
@@ -1529,10 +1289,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Analítica Predictiva",
-      "Minería de Datos"
-    ],
+    "lineasInvestigacion": "Analítica Predictiva, Minería de Datos",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2022-06-11",
@@ -1548,10 +1305,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "5G",
-      "IoT"
-    ],
+    "lineasInvestigacion": "5G, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2019-08-03",
@@ -1567,10 +1321,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Robótica Móvil"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Robótica Móvil",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2019-04-17",
@@ -1586,10 +1337,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2020-05-15",
@@ -1605,10 +1353,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Bioinformática",
-      "Genética"
-    ],
+    "lineasInvestigacion": "Bioinformática, Genética",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2022-02-08",
@@ -1624,10 +1369,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Producción Sostenible"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Producción Sostenible",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2024-05-14",
@@ -1643,10 +1385,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Salud Digital",
-      "Prevención"
-    ],
+    "lineasInvestigacion": "Salud Digital, Prevención",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2021-07-11",
@@ -1662,10 +1401,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "Visión Artificial"
-    ],
+    "lineasInvestigacion": "Machine Learning, Visión Artificial",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2022-06-11",
@@ -1681,10 +1417,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Big Data"
-    ],
+    "lineasInvestigacion": "Minería de Datos, Big Data",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2021-12-16",
@@ -1700,10 +1433,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "Redes",
-      "IoT"
-    ],
+    "lineasInvestigacion": "Redes, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2023-06-28",
@@ -1719,10 +1449,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Robótica Móvil",
-      "Sistemas Embebidos"
-    ],
+    "lineasInvestigacion": "Robótica Móvil, Sistemas Embebidos",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2024-03-03",
@@ -1738,10 +1465,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2024-12-25",
@@ -1757,10 +1481,7 @@
     "facultad": "Facultad de Ciencias Naturales",
     "programa": "Biología",
     "departamento": "Biología",
-    "lineasInvestigacion": [
-      "Genética",
-      "Microbiología"
-    ],
+    "lineasInvestigacion": "Genética, Microbiología",
     "objetivoSemillero": "Impulsar investigación aplicada en ciencias biológicas.",
     "disciplina": "Biotecnología",
     "fechaInicio": "2024-02-14",
@@ -1776,10 +1497,7 @@
     "facultad": "Facultad de Ciencias Agrarias",
     "programa": "Ingeniería Agroindustrial",
     "departamento": "Agroindustria",
-    "lineasInvestigacion": [
-      "Agrotecnología",
-      "Cadena de Suministro"
-    ],
+    "lineasInvestigacion": "Agrotecnología, Cadena de Suministro",
     "objetivoSemillero": "Optimizar procesos agroindustriales sostenibles.",
     "disciplina": "Agroindustria",
     "fechaInicio": "2019-06-26",
@@ -1795,10 +1513,7 @@
     "facultad": "Facultad de Ciencias de la Salud",
     "programa": "Medicina",
     "departamento": "Salud Pública",
-    "lineasInvestigacion": [
-      "Prevención",
-      "Epidemiología"
-    ],
+    "lineasInvestigacion": "Prevención, Epidemiología",
     "objetivoSemillero": "Generar conocimiento para mejorar la salud comunitaria.",
     "disciplina": "Salud Pública",
     "fechaInicio": "2024-03-06",
@@ -1814,10 +1529,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Machine Learning",
-      "NLP"
-    ],
+    "lineasInvestigacion": "Machine Learning, NLP",
     "objetivoSemillero": "Aplicar técnicas de IA para resolver problemas regionales.",
     "disciplina": "Inteligencia Artificial",
     "fechaInicio": "2022-11-09",
@@ -1833,10 +1545,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería de Sistemas",
     "departamento": "Ingeniería de Sistemas",
-    "lineasInvestigacion": [
-      "Minería de Datos",
-      "Analítica Predictiva"
-    ],
+    "lineasInvestigacion": "Minería de Datos, Analítica Predictiva",
     "objetivoSemillero": "Analizar datos para apoyar la toma de decisiones.",
     "disciplina": "Ciencia de Datos",
     "fechaInicio": "2022-06-19",
@@ -1852,10 +1561,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Telemática",
     "departamento": "Telecomunicaciones",
-    "lineasInvestigacion": [
-      "Redes",
-      "IoT"
-    ],
+    "lineasInvestigacion": "Redes, IoT",
     "objetivoSemillero": "Investigar tecnologías emergentes de comunicación.",
     "disciplina": "Telecomunicaciones",
     "fechaInicio": "2022-02-08",
@@ -1871,10 +1577,7 @@
     "facultad": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
     "programa": "Ingeniería Electrónica",
     "departamento": "Electrónica",
-    "lineasInvestigacion": [
-      "Sistemas Embebidos",
-      "Robótica Móvil"
-    ],
+    "lineasInvestigacion": "Sistemas Embebidos, Robótica Móvil",
     "objetivoSemillero": "Desarrollar soluciones automatizadas para la industria.",
     "disciplina": "Robótica",
     "fechaInicio": "2019-10-28",
@@ -1890,10 +1593,7 @@
     "facultad": "Facultad de Ingeniería Civil",
     "programa": "Ingeniería Ambiental",
     "departamento": "Ingeniería Ambiental",
-    "lineasInvestigacion": [
-      "Eficiencia Energética",
-      "Solar"
-    ],
+    "lineasInvestigacion": "Eficiencia Energética, Solar",
     "objetivoSemillero": "Promover tecnologías energéticas sostenibles.",
     "disciplina": "Energías Renovables",
     "fechaInicio": "2024-04-20",

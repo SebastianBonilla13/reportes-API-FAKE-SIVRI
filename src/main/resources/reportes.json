@@ -90,27 +90,79 @@
                         {
                             "id": 2,
                             "codigo": "R02",
-                            "titulo": "Semilleros por Programaa",
-                            "descripcion": "Distribución de semilleros de investigación organizados por programa académico.",
+                            "titulo": "Investigadores por Grupo de Investigación",
+                            "descripcion": "Muestra los investigadores vinculados a los grupos de investigación, junto con su información de identificación, vinculación institucional, grupo, roles y datos académicos.",
                             "columnasIncluidas": [
-                                "nombreSemillero",
-                                "programa",
+                                "nombre",
+                                "identificacion",
+                                "grupo",
+                                "idGrupo",
+                                "codigoGrupLAC",
+                                "enlaceGrupLAC",
+                                "historialRoles",
                                 "estado",
-                                "lider"
+                                "tipoVinculacion",
+                                "facultad",
+                                "departamento",
+                                "programas",
+                                "entidad"
                             ],
                             "filtrosDisponibles": [
                                 {
-                                    "nombre": "programa",
+                                    "nombre": "nombre",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "identificacion",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "grupo",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "idGrupo",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "codigoGrupLAC",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "historialRoles",
                                     "tipo": "combobox"
                                 },
                                 {
                                     "nombre": "estado",
                                     "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "tipoVinculacion",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "facultad",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "departamento",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "programas",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "entidad",
+                                    "tipo": "input"
                                 }
                             ],
                             "estadisticas": [
-                                "Semilleros activos vs inactivos",
-                                "Semilleros por facultad"
+                                "Investigadores por Grupo de Investigación",
+                                "Investigadores por Facultad",
+                                "Investigadores por Estado",
+                                "Investigadores por Tipo de Vinculación",
+                                "Investigadores por Rol"
                             ],
                             "formato": [
                                 "Excel",
@@ -562,6 +614,65 @@
                             ],
                             "formato": [
                                 "Excel",
+                                "PDF"
+                            ]
+                        },
+                        {
+                            "id": 21,
+                            "codigo": "VIG",
+                            "titulo": "Certificación de Vigencia de Contrato, Convenio o Proyecto",
+                            "descripcion": "Genera una certificación con la información de vigencia de un contrato, convenio o proyecto, incluyendo sus fechas de inicio y finalización y el director o coordinador responsable.",
+                            "columnasIncluidas": [
+                                "titulo",
+                                "idproyecto",
+                                "diaini",
+                                "mesini",
+                                "anioini",
+                                "diafin",
+                                "mesfin",
+                                "aniofin",
+                                "director"
+                            ],
+                            "filtrosDisponibles": [
+                                {
+                                    "nombre": "idproyecto",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "titulo",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "director",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "diaini",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "mesini",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "anioini",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "diafin",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "mesfin",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "aniofin",
+                                    "tipo": "input"
+                                }
+                            ],
+                            "estadisticas": [],
+                            "formato": [
                                 "PDF"
                             ]
                         }
