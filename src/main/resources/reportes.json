@@ -78,10 +78,7 @@
                                     "tipo": "date"
                                 }
                             ],
-                            "estadisticas": [
-                                "Semilleros de Investigación por Facultad",
-                                "Semilleros de investigación activos/inactivos"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -157,13 +154,7 @@
                                     "tipo": "input"
                                 }
                             ],
-                            "estadisticas": [
-                                "Investigadores por Grupo de Investigación",
-                                "Investigadores por Facultad",
-                                "Investigadores por Estado",
-                                "Investigadores por Tipo de Vinculación",
-                                "Investigadores por Rol"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -186,10 +177,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Investigadores por categoría",
-                                "Variación anual de categorizaciones"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -198,26 +186,129 @@
                         {
                             "id": 4,
                             "codigo": "R04",
-                            "titulo": "Grupos de Investigación por Facultad",
-                            "descripcion": "Relación de grupos activos distribuidos por facultad.",
+                            "titulo": "Categorización Grupos de investigación",
+                            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
                             "columnasIncluidas": [
-                                "nombreGrupo",
+                                "nombreCompletoDeIntegrante",
+                                "numeroIdentificacion",
+                                "nombreGrupoDeInvestigacion",
+                                "idGrupo",
+                                "codigoGruplac",
+                                "enlaceGruplac",
+                                "enlaceCvlac",
+                                "historialRolesEnGrupo",
+                                "fechaInicioRol",
+                                "fechaFinRol",
+                                "estadoIntegranteGrupo",
+                                "tipoVinculacion",
                                 "facultad",
-                                "estado"
+                                "departamento",
+                                "programa"
                             ],
                             "filtrosDisponibles": [
                                 {
+                                    "nombre": "nombreCompletoDeIntegrante",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "numeroIdentificacion",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "nombreGrupoDeInvestigacion",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "idGrupo",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "codigoGruplac",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "enlaceGruplac",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "enlaceCvlac",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "fechaInicioRol",
+                                    "tipo": "date"
+                                },
+                                {
+                                    "nombre": "fechaFinRol",
+                                    "tipo": "date"
+                                },
+                                {
+                                    "nombre": "estadoIntegranteGrupo",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "tipoVinculacion",
+                                    "tipo": "combobox"
+                                },
+                                {
                                     "nombre": "facultad",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "departamento",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "programa",
                                     "tipo": "combobox"
                                 }
                             ],
+                            "configuracionFechas": [
+                                {
+                                    "tipo": "EVENTO",
+                                    "filtroDesde": "fechaInicioRol",
+                                    "columnaFecha": "fechaInicioRol"
+                                },
+                                {
+                                    "tipo": "EVENTO",
+                                    "filtroHasta": "fechaFinRol",
+                                    "columnaFecha": "fechaFinRol"
+                                }
+                            ],
                             "estadisticas": [
-                                "Número de grupos por facultad",
-                                "Tasa de crecimiento"
+                                {
+                                    "id": "integrantes_por_grupo",
+                                    "titulo": "Total Integrantes por Grupo",
+                                    "tipoGrafico": "CIRCULAR",
+                                    "campoAgrupacion": "nombreGrupoDeInvestigacion",
+                                    "campoSerie": null,
+                                    "filtroFijoClave": "estadoIntegranteGrupo",
+                                    "filtroFijoValor": "ACTIVO",
+                                    "maxCategorias": 15,
+                                    "ignorarLimiteConFiltros": []
+                                },
+                                {
+                                    "id": "roles_por_facultad",
+                                    "titulo": "Roles de Integrantes por Facultad",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "facultad",
+                                    "campoSerie": "historialRolesEnGrupo",
+                                    "filtroFijoClave": "estadoIntegranteGrupo",
+                                    "filtroFijoValor": "ACTIVO",
+                                    "ocultarConFiltros": []
+                                },
+                                {
+                                    "id": "vinculacion_por_grupo",
+                                    "titulo": "Tipo de Vinculación por Grupo",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "nombreGrupoDeInvestigacion",
+                                    "campoSerie": "tipoVinculacion",
+                                    "filtroFijoClave": null,
+                                    "filtroFijoValor": null
+                                }
                             ],
                             "formato": [
-                                "Excel",
-                                "PDF"
+                                "Excel"
                             ]
                         },
                         {
@@ -237,10 +328,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Distribución de grupos por categoría",
-                                "Ranking de desempeño"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -263,10 +351,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Investigadores por facultad",
-                                "Promedio de integrantes por grupo"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel"
                             ]
@@ -287,9 +372,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Impacto académico por categoría"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -316,10 +399,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Proyectos por estado",
-                                "Índice de ejecución"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "PDF"
                             ]
@@ -348,10 +428,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Cantidad por facultad",
-                                "Estado de participación"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -373,9 +450,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Grupos activos vs inactivos"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel"
                             ]
@@ -396,10 +471,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Producción anual",
-                                "Índice de productividad"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -422,9 +494,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Eventos por facultad"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "PDF"
                             ]
@@ -446,9 +516,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Convenios por institución"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel"
                             ]
@@ -469,9 +537,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Financiación total anual"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -493,9 +559,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Producción acumulada"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "PDF"
                             ]
@@ -516,9 +580,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Movilidad por destino"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel"
                             ]
@@ -539,9 +601,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Premios por grupo"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "PDF"
                             ]
@@ -562,9 +622,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Participación internacional"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"
@@ -586,9 +644,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Patentes por año"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel"
                             ]
@@ -609,9 +665,7 @@
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [
-                                "Índice de cumplimiento"
-                            ],
+                            "estadisticas": [],
                             "formato": [
                                 "Excel",
                                 "PDF"

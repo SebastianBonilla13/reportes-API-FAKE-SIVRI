@@ -93,10 +93,54 @@ paths:
                 type: string
                 format: binary
 
+  /reportes-estadisticos/{codigo}/estadisticas:
+    post:
+      summary: Obtener cálculos estadísticos de un reporte
+      operationId: obtenerEstadisticasReporte
+      parameters:
+        - name: codigo
+          in: path
+          required: true
+          schema:
+            type: string
+            example: R04
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FiltrosReporteRequest'
+      responses:
+        '200':
+          description: Datos estadísticos agrupados listos para graficar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponseEstadisticas'
+
 #----
 
 components:
   schemas:
+
+    ApiResponseEstadisticas:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        userMessage:
+          type: string
+          example: Ok
+        developerMessage:
+          type: string
+          example: ""
+#          listado de reportes
+        data:
+          type: object
+          additionalProperties: true
+          nullable: true
+
     ApiResponseReportes:
       type: object
       properties:
@@ -151,11 +195,88 @@ components:
         estadisticas:
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/ConfiguracionEstadisticas'
         formato:
           type: array
           items:
             type: string
+        configuracionFechas:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ConfiguracionFechas'
+
+    ConfiguracionFechas:
+      type: object
+      properties:
+        tipo:
+          type: string
+          enum: [ INTERVALO, EVENTO ]
+          description: "INTERVALO cruza dos columnas. EVENTO evalúa una sola columna."
+        filtroDesde:
+          type: string
+          description: "Llave del JSON que envía el frontend como límite inferior (ej. fechaInicioRol)"
+        filtroHasta:
+          type: string
+          description: "Llave del JSON que envía el frontend como límite superior (ej. fechaFinRol)"
+        columnaInicio:
+          type: string
+          nullable: true
+          description: "Columna en la BD para el inicio (Solo si es INTERVALO)"
+        columnaFin:
+          type: string
+          nullable: true
+          description: "Columna en la BD para el fin (Solo si es INTERVALO)"
+        columnaFecha:
+          type: string
+          nullable: true
+          description: "Columna única en la BD (Solo si es EVENTO, ej. fechaPublicacion)"
+
+    ConfiguracionEstadisticas:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "Llave del gráfico (ej. roles_por_facultad)"
+        titulo:
+          type: string
+          description: "Título legible para el frontend"
+        tipoGrafico:
+          type: string
+          enum: [ CIRCULAR, BARRAS_APILADAS ]
+          description: "Define el motor matemático a usar"
+        campoAgrupacion:
+          type: string
+          description: "Columna para el Eje X o llave del Pie"
+        campoSerie:
+          type: string
+          nullable: true
+          description: "Columna para las series en barras apiladas"
+        filtroFijoClave:
+          type: string
+          nullable: true
+          description: "Si el gráfico requiere filtrar la data antes (ej. estadoGrupo)"
+        filtroFijoValor:
+          type: string
+          nullable: true
+          description: "Valor del filtro fijo (ej. ACTIVO)"
+        maxCategorias:
+          type: integer
+          nullable: true
+          description: "Límite visual para gráficos circulares antes de agrupar en 'Otros'"
+        ocultarConFiltros:
+          type: array
+          items:
+            type: string
+          nullable: true
+          description: "Lista de llaves de filtros que, si están activos, ocultarán este gráfico"
+        ignorarLimiteConFiltros:
+          type: array
+          items:
+            type: string
+          nullable: true
+          description: "Si estos filtros están activos, no se agrupará en 'Otros' (ignora maxCategorias)"
+
 
     FiltroDisponible:
       type: object
