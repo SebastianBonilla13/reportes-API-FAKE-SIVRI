@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -102,18 +101,89 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
         return ResponseEntity.ok(response);
     }
 
+//    @Override
+//    public ResponseEntity<Resource> generarReporte(
+//            String codigo,
+//            String formato,
+//            FiltrosReporteRequest request) { // Renombrado a 'request' por legibilidad
+//
+//        try {
+//
+//            List<Map<String, Object>> dataFuente;
+//
+//            // 1. DETERMINAR LA FUENTE DE DATOS:
+//            // Si el request contiene 'data', esa es nuestra fuente. Si no, usamos la data quemada.
+//            if (request != null && request.getData() != null && !request.getData().isEmpty()) {
+//                dataFuente = request.getData();
+//            } else {
+//                dataFuente = obtenerDataQuemada(codigo);
+//            }
+//
+//            ReporteMetadata metadata = obtenerMetadataPorCodigo(codigo);
+//
+//            // 2. APLICAR FILTROS A LA FUENTE DE DATOS:
+//            List<Map<String, Object>> dataFinal = aplicarFiltros(dataFuente, request, metadata);
+//
+//            // 3. PREPARAR PETICIÓN AL MICROSERVICIO:
+//            ReporteExternoRequest requestExterno = new ReporteExternoRequest();
+//            requestExterno.setTipoReporte(codigo);
+//            requestExterno.setFormato(formato);
+//            requestExterno.setData(dataFinal); // Pasamos la data final (obtenida del body y filtrada)
+//
+//            HttpHeaders headers = new HttpHeaders();
+//            headers.setContentType(MediaType.APPLICATION_JSON);
+//
+//            log.info("REQUEST: {}", requestExterno);
+//
+//            HttpEntity<ReporteExternoRequest> entity = new HttpEntity<>(requestExterno, headers);
+//
+//            // 4. EJECUTAR REST TEMPLATE:
+//            ResponseEntity<byte[]> responseExterno = restTemplate.exchange(
+//                    "http://localhost:8081/reportes/generar",
+//                    HttpMethod.POST,
+//                    entity,
+//                    byte[].class);
+//
+//            byte[] archivo = responseExterno.getBody();
+//
+//            if (archivo == null || archivo.length == 0) {
+//                return ResponseEntity.internalServerError().build();
+//            }
+//
+//            MediaType contentType = responseExterno.getHeaders().getContentType();
+//
+//            if (contentType == null) {
+//                contentType = "pdf".equalsIgnoreCase(formato)
+//                        ? MediaType.APPLICATION_PDF
+//                        : MediaType.parseMediaType(
+//                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+//            }
+//
+//            String extension = "pdf".equalsIgnoreCase(formato) ? "pdf" : "xlsx";
+//
+//            return ResponseEntity.ok()
+//                    .contentType(contentType)
+//                    .contentLength(archivo.length)
+//                    .header(
+//                            HttpHeaders.CONTENT_DISPOSITION,
+//                            "attachment; filename=\"reporte-" + codigo.toLowerCase() + "." + extension + "\"")
+//                    .body(new ByteArrayResource(archivo));
+//
+//        } catch (Exception e) {
+//            log.error("Error generando reporte: ", e);
+//            return ResponseEntity.internalServerError().build();
+//        }
+//    }
+
     @Override
     public ResponseEntity<Resource> generarReporte(
             String codigo,
             String formato,
-            FiltrosReporteRequest request) { // Renombrado a 'request' por legibilidad
+            FiltrosReporteRequest request) {
 
         try {
-            
             List<Map<String, Object>> dataFuente;
 
-            // 1. DETERMINAR LA FUENTE DE DATOS:
-            // Si el request contiene 'data', esa es nuestra fuente. Si no, usamos la data quemada.
             if (request != null && request.getData() != null && !request.getData().isEmpty()) {
                 dataFuente = request.getData();
             } else {
@@ -121,24 +191,47 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
             }
 
             ReporteMetadata metadata = obtenerMetadataPorCodigo(codigo);
-
-            // 2. APLICAR FILTROS A LA FUENTE DE DATOS:
             List<Map<String, Object>> dataFinal = aplicarFiltros(dataFuente, request, metadata);
 
-            // 3. PREPARAR PETICIÓN AL MICROSERVICIO:
+            // =========================================================
+            // NUEVO: INTERCEPCIÓN DE CONSULTAS ADICIONALES (CERTIFICADOS)
+            // =========================================================
+            Map<String, Object> parametrosJasperAdicionales = new HashMap<>();
+
+            if ("pdf".equalsIgnoreCase(formato) && metadata != null
+                    && metadata.getConsultasAdicionales() != null
+                    && metadata.getConsultasAdicionales().getCertificado() != null) {
+
+                CertificadoConfig certConfig = metadata.getConsultasAdicionales().getCertificado();
+
+                if ("PDF".equalsIgnoreCase(certConfig.getFormato()) && certConfig.getConsultas() != null) {
+
+                    Map<String, Object> filaCertificado = dataFinal.isEmpty() ? new HashMap<>() : dataFinal.get(0);
+
+                    for (ConsultaConfig consulta : certConfig.getConsultas()) {
+                        String valorFiltro = String.valueOf(filaCertificado.get(consulta.getCampoFiltro()));
+
+                        // Ahora este método irá al archivo JSON y traerá la lista filtrada
+                        List<Map<String, Object>> subData = simularConsultaAdicional(consulta.getTipoConsulta(), valorFiltro);
+
+                        parametrosJasperAdicionales.put(consulta.getLlaveJasper(), subData);
+                    }
+                }
+            }
+            // =========================================================
+
             ReporteExternoRequest requestExterno = new ReporteExternoRequest();
             requestExterno.setTipoReporte(codigo);
             requestExterno.setFormato(formato);
-            requestExterno.setData(dataFinal); // Pasamos la data final (obtenida del body y filtrada)
+            requestExterno.setData(dataFinal);
+
+            // DEBES ASEGURARTE de agregar este mapa a tu modelo ReporteExternoRequest
+            // requestExterno.setParametrosAdicionales(parametrosJasperAdicionales);
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
-
-            log.info("REQUEST: {}", requestExterno);
-
             HttpEntity<ReporteExternoRequest> entity = new HttpEntity<>(requestExterno, headers);
 
-            // 4. EJECUTAR REST TEMPLATE:
             ResponseEntity<byte[]> responseExterno = restTemplate.exchange(
                     "http://localhost:8081/reportes/generar",
                     HttpMethod.POST,
@@ -146,18 +239,15 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
                     byte[].class);
 
             byte[] archivo = responseExterno.getBody();
-
             if (archivo == null || archivo.length == 0) {
                 return ResponseEntity.internalServerError().build();
             }
 
             MediaType contentType = responseExterno.getHeaders().getContentType();
-
             if (contentType == null) {
                 contentType = "pdf".equalsIgnoreCase(formato)
                         ? MediaType.APPLICATION_PDF
-                        : MediaType.parseMediaType(
-                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+                        : MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             }
 
             String extension = "pdf".equalsIgnoreCase(formato) ? "pdf" : "xlsx";
@@ -174,6 +264,88 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
             log.error("Error generando reporte: ", e);
             return ResponseEntity.internalServerError().build();
         }
+    }
+
+    @Override
+    public ResponseEntity<List<Map<String, Object>>> obtenerDataAdicional(String tipoConsulta, String valorFiltro) {
+
+        List<Map<String, Object>> subData = new ArrayList<>();
+
+        try {
+            // Enrutador Agnóstico de Consultas
+            switch (tipoConsulta.toUpperCase()) {
+
+                case "INTEGRANTES_POR_GRUPO":
+                    // Lee el archivo json de integrantes y filtra por el ID enviado
+                    try (InputStream inputStream = new ClassPathResource("datos-reporte-r02.json").getInputStream()) {
+                        List<Map<String, Object>> todos = mapper.readValue(
+                                inputStream,
+                                new TypeReference<List<Map<String, Object>>>() {});
+
+                        subData = todos.stream()
+                                .filter(i -> valorFiltro.equals(String.valueOf(i.get("idGrupo"))))
+                                .collect(Collectors.toList());
+                    }
+                    break;
+
+                case "DETALLE_INTEGRANTE_PROYECTO":
+                    log.info("Buscando detalle anidado del investigador con ID: {}", valorFiltro);
+                    try (InputStream inputStream = new ClassPathResource("detalle-integrantes-proyectos.json").getInputStream()) {
+                        List<Map<String, Object>> todos = mapper.readValue(
+                                inputStream,
+                                new TypeReference<List<Map<String, Object>>>() {});
+
+                        // Busca a la persona por su número de identificación
+                        subData = todos.stream()
+                                .filter(i -> valorFiltro.equals(String.valueOf(i.get("numeroIdentificacion"))))
+                                .collect(Collectors.toList());
+                    }
+                    break;
+
+                default:
+                    log.warn("Tipo de consulta adicional no soportado: {}", tipoConsulta);
+                    return ResponseEntity.badRequest().build();
+            }
+
+            return ResponseEntity.ok(subData);
+
+        } catch (Exception e) {
+            log.error("Error obteniendo data adicional para {}: ", tipoConsulta, e);
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+
+    // =========================================================
+    // SIMULADOR DE FÁBRICA DE PROVEEDORES (Para tu API Fake)
+    // =========================================================
+    private List<Map<String, Object>> simularConsultaAdicional(String tipoConsulta, String idFiltro) {
+        List<Map<String, Object>> subData = new ArrayList<>();
+
+        if ("INTEGRANTES_POR_GRUPO".equals(tipoConsulta)) {
+            log.info("Buscando integrantes en integrantes.json para el Grupo ID: {}", idFiltro);
+
+            try (InputStream inputStream = new ClassPathResource("datos-reporte-r02.json").getInputStream()) {
+                // 1. Leer todo el archivo
+                List<Map<String, Object>> todosLosIntegrantes = mapper.readValue(
+                        inputStream,
+                        new TypeReference<List<Map<String, Object>>>() {
+                        });
+
+                // 2. Filtrar únicamente los que pertenecen al grupo solicitado
+                subData = todosLosIntegrantes.stream()
+                        .filter(integrante -> idFiltro.equals(String.valueOf(integrante.get("idGrupo"))))
+                        .collect(Collectors.toList());
+
+                log.info("Se encontraron {} integrantes para el grupo {}", subData.size(), idFiltro);
+
+            } catch (Exception e) {
+                log.error("Error leyendo el archivo integrantes.json: ", e);
+            }
+        }
+
+        // Si a futuro agregas "ROLES_POR_PROYECTO", agregas otro bloque if aquí leyendo otro json
+
+        return subData;
     }
 
     private ReporteMetadata obtenerMetadataPorCodigo(String codigo) {
@@ -405,7 +577,9 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
         String archivo = switch (codigo.toUpperCase()) {
             case "R01" -> "datos-reporte-r01.json";
             case "R02" -> "datos-reporte-r02.json";
-            case "R04" -> "datos-reporte-r04.json";
+            case "R03" -> "datos-reporte-r03.json";
+            case "R04" -> "datos-reporte-r02.json";
+            case "R07" -> "datos-reporte-r07.json";
             case "VIG" -> "vigencia-v1.json";
 
             default -> "aaa";
@@ -434,65 +608,49 @@ public class ReporteApiImpl implements ReportesEstadisticosApi {
 //                .filter(row -> cumpleFiltros(row, filtros))
 //                .toList();
 //    }
-    private List<Map<String, Object>> aplicarFiltros(
-            List<Map<String, Object>> data,
-            FiltrosReporteRequest request,
-            ReporteMetadata metadata) {
+private List<Map<String, Object>> aplicarFiltros(
+        List<Map<String, Object>> data,
+        FiltrosReporteRequest request,
+        ReporteMetadata metadata) {
 
-        if (request == null || request.getFiltros() == null || request.getFiltros().isEmpty()) {
-            return data;
+    if (request == null || request.getFiltros() == null || request.getFiltros().isEmpty()) {
+        return data;
+    }
+
+    Map<String, Object> filtros = request.getFiltros();
+    List<ConfiguracionFechas> configsFechas = metadata != null ? metadata.getConfiguracionFechas() : null;
+
+    return data.stream().filter(fila -> {
+
+        // 1. Evaluar configuraciones de fechas
+        if (configsFechas != null && !configsFechas.isEmpty()) {
+            for (ConfiguracionFechas config : configsFechas) {
+                boolean cumpleFechas = evaluarFiltroFechas(fila, filtros, config);
+                if (!cumpleFechas) {
+                    return false;
+                }
+            }
         }
 
-        Map<String, Object> filtros = request.getFiltros();
-        List<ConfiguracionFechas> configsFechas = metadata != null ? metadata.getConfiguracionFechas() : null;
-
-        return data.stream().filter(fila -> {
-
-            // 1. Evaluar todas las configuraciones de fechas que tenga el reporte
-            if (configsFechas != null && !configsFechas.isEmpty()) {
-                for (ConfiguracionFechas config : configsFechas) {
-                    boolean cumpleFechas = evaluarFiltroFechas(fila, filtros, config);
-                    if (!cumpleFechas) {
-                        return false; // Si falla cualquier regla de fecha, descartamos la fila
-                    }
-                }
+        // 2. Extraer solo los filtros de texto (quitando los de fechas que ya se evaluaron)
+        Map<String, Object> filtrosTexto = new HashMap<>();
+        for (Map.Entry<String, Object> entry : filtros.entrySet()) {
+            boolean esFiltroFecha = false;
+            if (configsFechas != null) {
+                esFiltroFecha = configsFechas.stream().anyMatch(c ->
+                        entry.getKey().equals(c.getFiltroDesde()) || entry.getKey().equals(c.getFiltroHasta())
+                );
             }
-
-            // 2. Evaluar el resto de filtros (búsqueda de texto)
-            for (Map.Entry<String, Object> entry : filtros.entrySet()) {
-                String llaveFiltro = entry.getKey();
-                Object valorFiltro = entry.getValue();
-
-                // Ignorar nulos o vacíos enviados desde Angular
-                if (valorFiltro == null || valorFiltro.toString().isBlank() || "null".equals(valorFiltro.toString())) {
-                    continue;
-                }
-
-                // OMITIR si esta llave ya fue procesada por alguna configuración de fechas
-                boolean esFiltroFecha = false;
-                if (configsFechas != null) {
-                    esFiltroFecha = configsFechas.stream().anyMatch(c ->
-                            llaveFiltro.equals(c.getFiltroDesde()) || llaveFiltro.equals(c.getFiltroHasta())
-                    );
-                }
-                if (esFiltroFecha) {
-                    continue;
-                }
-
-                // Comparación tradicional por Contains para textos (departamento, facultad, etc.)
-                Object valorFila = fila.get(llaveFiltro);
-                if (valorFila == null) {
-                    return false;
-                }
-
-                if (!valorFila.toString().toLowerCase().contains(valorFiltro.toString().toLowerCase())) {
-                    return false;
-                }
+            if (!esFiltroFecha) {
+                filtrosTexto.put(entry.getKey(), entry.getValue());
             }
+        }
 
-            return true;
-        }).toList();
-    }
+        // 3. Delegar la evaluación de texto al método que tiene la Regex
+        return cumpleFiltros(fila, filtrosTexto);
+
+    }).toList();
+}
 
 //    private boolean evaluarFiltroFechas(Map<String, Object> fila, Map<String, Object> filtros, ConfiguracionFechas config) {
 //        String strDesde = filtros.containsKey(config.getFiltroDesde()) ? String.valueOf(filtros.get(config.getFiltroDesde())) : null;
@@ -630,17 +788,31 @@ private boolean cumpleFiltros(Map<String, Object> row, Map<String, Object> filtr
             continue;
         }
 
-        // 2. Coincidencia por patrón (contains) para búsquedas parciales
-        if (textoFila.contains(textoFiltro)) {
+//        // 2. Coincidencia por patrón (contains) para búsquedas parciales
+//        if (textoFila.contains(textoFiltro)) {
+//
+//            // Heurística para evitar el falso positivo de estados anidados ("activo" dentro de "inactivo")
+//            // Si el valor de la fila es una sola palabra puramente alfabética y el filtro actúa como un sufijo,
+//            // se asume que es una palabra diferente y se descarta el match.
+//            if (textoFila.matches("[a-záéíóúñ]+") && textoFila.endsWith(textoFiltro)) {
+//                return false;
+//            }
+//
+//            continue; // Cumple el filtro por patrón (ej. "105" dentro de "1061749604")
+//        }
+        String regex = ".*\\b" + java.util.regex.Pattern.quote(textoFiltro) + "\\b.*";
+        if (textoFila.matches(regex)) {
+            continue;
+        }
 
-            // Heurística para evitar el falso positivo de estados anidados ("activo" dentro de "inactivo")
-            // Si el valor de la fila es una sola palabra puramente alfabética y el filtro actúa como un sufijo,
-            // se asume que es una palabra diferente y se descarta el match.
-            if (textoFila.matches("[a-záéíóúñ]+") && textoFila.endsWith(textoFiltro)) {
+        // 3. Fallback: Contains tradicional (solo para textos muy parciales)
+        if (textoFila.contains(textoFiltro)) {
+            // Si el texto de la fila es "inactivo" y el filtro es "activo",
+            // el contains es true, pero NO queremos que pase.
+            if (textoFila.endsWith("inactivo") && textoFiltro.equals("activo")) {
                 return false;
             }
-
-            continue; // Cumple el filtro por patrón (ej. "105" dentro de "1061749604")
+            continue;
         }
 
         // Si no es coincidencia exacta ni contiene el patrón válido, falla

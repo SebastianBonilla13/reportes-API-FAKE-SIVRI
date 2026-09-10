@@ -1,0 +1,47 @@
+[
+  {
+    "nombreIntegrante": "Carlos Alberto Ruiz",
+    "numeroIdentificacion": "1052345678",
+    "facultadIntegrante": "Facultad de Ingeniería Electrónica",
+    "departamentoIntegrante": "Departamento de Sistemas",
+    "programaIntegrante": "Ingeniería de Sistemas",
+    "proyectos": [
+      {
+        "idProyecto": "PRJ-2024-001",
+        "tituloProyecto": "Sistema IoT para monitoreo",
+        "fechaInicioProyecto": "2024-01-15",
+        "fechaFinProyecto": "2025-01-15",
+        "historialRolesEnProyecto": "INVESTIGADOR_PRINCIPAL",
+        "fechaInicioRolProyecto": "2024-01-15",
+        "fechaFinRolProyecto": "2025-01-15",
+        "nombreGrupo": "Grupo de Telemática (GIT)",
+        "idGrupo": "G-102",
+        "codigoGruplac": "COL0012345",
+        "nombreSemillero": "N/A",
+        "idSemillero": "N/A",
+        "horasDedicacionSemanal": 12,
+        "tipoProyecto": "INTERNO",
+        "nombreConvocatoria": "Convocatoria Interna VRI 2023",
+        "elementoMisional": "Gestión de la Investigación"
+      },
+      {
+        "idProyecto": "PRJ-2023-089",
+        "tituloProyecto": "IA aplicada al tráfico",
+        "fechaInicioProyecto": "2023-06-01",
+        "fechaFinProyecto": "2024-06-01",
+        "historialRolesEnProyecto": "COINVESTIGADOR",
+        "fechaInicioRolProyecto": "2023-06-01",
+        "fechaFinRolProyecto": "2024-06-01",
+        "nombreGrupo": "Grupo de Telemática (GIT)",
+        "idGrupo": "G-102",
+        "codigoGruplac": "COL0012345",
+        "nombreSemillero": "N/A",
+        "idSemillero": "N/A",
+        "horasDedicacionSemanal": 8,
+        "tipoProyecto": "EXTERNO",
+        "nombreConvocatoria": "Minciencias 2023",
+        "elementoMisional": "División de Innovación"
+      }
+    ]
+  }
+]

@@ -117,6 +117,33 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResponseEstadisticas'
+  /reportes-estadisticos/data-adicional/{tipoConsulta}:
+    get:
+      summary: Obtener datos adicionales para hidratar certificados o reportes complejos
+      operationId: obtenerDataAdicional
+      parameters:
+        - name: tipoConsulta
+          in: path
+          required: true
+          description: "Identificador del proveedor de datos (ej. INTEGRANTES_POR_GRUPO)"
+          schema:
+            type: string
+        - name: valorFiltro
+          in: query
+          required: true
+          description: "Valor del ID o llave a filtrar (ej. 1746)"
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de datos adicionales asociada al filtro
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  additionalProperties: true
 
 #----
 
@@ -205,6 +232,48 @@ components:
           nullable: true
           items:
             $ref: '#/components/schemas/ConfiguracionFechas'
+        consultasAdicionales:
+          $ref: '#/components/schemas/ConsultasAdicionalesConfig'
+          nullable: true
+
+    ConsultasAdicionalesConfig:
+      type: object
+      properties:
+        certificado:
+          $ref: '#/components/schemas/CertificadoConfig'
+
+    CertificadoConfig:
+      type: object
+      properties:
+        formato:
+          type: string
+          description: "Formato en el que aplica esta regla, ej. PDF"
+        reporte:
+          type: string
+          description: "Código específico del reporte a generar para el certificado (ej. R01-C)"
+        consultas:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConsultaConfig'
+
+    ConsultaConfig:
+      type: object
+      properties:
+        llaveJasper:
+          type: string
+          description: "Nombre del parámetro que espera JasperReports"
+        tipoConsulta:
+          type: string
+          description: "Identificador del proveedor de datos"
+        campoFiltro:
+          type: string
+          description: "Llave de la fila enviada por el front que se usará como filtro"
+        endpoint:
+          type: string
+          description: "Ruta del endpoint al que el frontend debe consultar la data adicional"
+        parametroQuery:
+          type: string
+          description: "Nombre del parámetro query que el frontend debe enviar"
 
     ConfiguracionFechas:
       type: object

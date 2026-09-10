@@ -2,196 +2,126 @@
                         {
                             "id": 1,
                             "codigo": "R01",
-                            "titulo": "Semillero de Investigación por Programa",
-                            "descripcion": "Muestra los semilleros de investigación registrados en el sistema, agrupados por programa académico y sus datos asociados.",
+                            "titulo": "Grupos de Investigación",
+                            "descripcion": "Reporte integral de grupos de investigación. Permite visualizar y filtrar la información general de los grupos, incluyendo su facultad, departamento, líneas de investigación, disciplinas, estado actual y su nivel de categorización.",
                             "columnasIncluidas": [
-                                "idSemillero",
-                                "nombreSemilleroInvestigacion",
-                                "mentorSemillero",
-                                "coordinadorSemillero",
-                                "correoMentorSemillero",
-                                "correoSemilleroInvestigacion",
-                                "facultad",
-                                "programa",
-                                "departamento",
-                                "lineasInvestigacion",
-                                "objetivoSemillero",
-                                "disciplina",
-                                "fechaInicio",
-                                "fechaFin"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "idSemillero",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "nombreSemilleroInvestigacion",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "mentorSemillero",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "coordinadorSemillero",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "correoMentorSemillero",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "correoSemilleroInvestigacion",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "facultad",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "programa",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "departamento",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "lineasInvestigacion",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "objetivoSemillero",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "disciplina",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "fechaInicio",
-                                    "tipo": "date"
-                                },
-                                {
-                                    "nombre": "fechaFin",
-                                    "tipo": "date"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "codigo": "R02",
-                            "titulo": "Investigadores por Grupo de Investigación",
-                            "descripcion": "Muestra los investigadores vinculados a los grupos de investigación, junto con su información de identificación, vinculación institucional, grupo, roles y datos académicos.",
-                            "columnasIncluidas": [
-                                "nombre",
-                                "identificacion",
-                                "grupo",
                                 "idGrupo",
-                                "codigoGrupLAC",
-                                "enlaceGrupLAC",
-                                "historialRoles",
-                                "estado",
-                                "tipoVinculacion",
-                                "facultad",
-                                "departamento",
-                                "programas",
-                                "entidad"
+                                "nombreGrupo",
+                                "codigoGruplac",
+                                "enlaceGruplac",
+                                "directorGrupo",
+                                "correoDirectorGrupo",
+                                "correoGrupo",
+                                "facultadGrupo",
+                                "departamentoDirector",
+                                "lineasInvestigacionGrupo",
+                                "disciplinasGrupo",
+                                "categorizacionGrupo",
+                                "estadoGrupo"
                             ],
                             "filtrosDisponibles": [
-                                {
-                                    "nombre": "nombre",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "identificacion",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "grupo",
-                                    "tipo": "combobox"
-                                },
                                 {
                                     "nombre": "idGrupo",
                                     "tipo": "input"
                                 },
                                 {
-                                    "nombre": "codigoGrupLAC",
+                                    "nombre": "nombreGrupo",
                                     "tipo": "input"
                                 },
                                 {
-                                    "nombre": "historialRoles",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "estado",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "tipoVinculacion",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "facultad",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "departamento",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "programas",
-                                    "tipo": "combobox"
-                                },
-                                {
-                                    "nombre": "entidad",
+                                    "nombre": "codigoGruplac",
                                     "tipo": "input"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "codigo": "R03",
-                            "titulo": "Categorización de Investigadores",
-                            "descripcion": "Clasificación de los investigadores según su nivel de categorización Colciencias.",
-                            "columnasIncluidas": [
-                                "nombre",
-                                "categoria",
-                                "grupo",
-                                "ultActualizacion"
-                            ],
-                            "filtrosDisponibles": [
+                                },
                                 {
-                                    "nombre": "categoria",
+                                    "nombre": "directorGrupo",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "facultadGrupo",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "departamentoDirector",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "lineasInvestigacionGrupo",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "disciplinasGrupo",
+                                    "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "categorizacionGrupo",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "estadoGrupo",
                                     "tipo": "combobox"
                                 }
                             ],
-                            "estadisticas": [],
+                            "estadisticas": [
+                                {
+                                    "id": "grupos_por_categoria",
+                                    "titulo": "Grupos de Investigación por Categoría",
+                                    "tipoGrafico": "CIRCULAR",
+                                    "campoAgrupacion": "categorizacionGrupo",
+                                    "campoSerie": null,
+                                    "maxCategorias": 10
+                                },
+                                {
+                                    "id": "grupos_por_facultad",
+                                    "titulo": "Grupos de Investigación por Facultad",
+                                    "tipoGrafico": "CIRCULAR",
+                                    "campoAgrupacion": "facultadGrupo",
+                                    "campoSerie": null,
+                                    "maxCategorias": 15
+                                },
+                                {
+                                    "id": "grupos_por_departamento",
+                                    "titulo": "Grupos de Investigación por Departamento",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "departamentoDirector",
+                                    "campoSerie": null,
+                                    "maxCategorias": 20
+                                },
+                                {
+                                    "id": "categorias_por_facultad",
+                                    "titulo": "Nivel de Categorización por Facultad",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "facultadGrupo",
+                                    "campoSerie": "categorizacionGrupo"
+                                }
+                            ],
+                            "consultasAdicionales": {
+                              "certificado": {
+                                "formato": "PDF",
+                                "reporte": "R01-C",
+                                "consultas": [
+                                  {
+                                    "llaveJasper": "DataIntegrantes",
+                                    "tipoConsulta": "INTEGRANTES_POR_GRUPO",
+                                    "campoFiltro": "idGrupo",
+                                    "endpoint": "/reportes-estadisticos/data-adicional/INTEGRANTES_POR_GRUPO",
+                                    "parametroQuery": "valorFiltro"
+                                  }
+                                ]
+                              }
+                            },
                             "formato": [
-                                "Excel",
-                                "PDF"
+                                "Excel"
                             ]
                         },
                         {
-                            "id": 4,
-                            "codigo": "R04",
-                            "titulo": "Categorización Grupos de investigación",
+                            "id": 2,
+                            "codigo": "R02",
+                            "titulo": "Integrantes Grupos de Investigación",
                             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
                             "columnasIncluidas": [
-                                "nombreCompletoDeIntegrante",
+                                "nombreIntegrante",
                                 "numeroIdentificacion",
-                                "nombreGrupoDeInvestigacion",
+                                "nombreGrupo",
                                 "idGrupo",
                                 "codigoGruplac",
                                 "enlaceGruplac",
@@ -200,14 +130,14 @@
                                 "fechaInicioRol",
                                 "fechaFinRol",
                                 "estadoIntegranteGrupo",
-                                "tipoVinculacion",
-                                "facultad",
-                                "departamento",
-                                "programa"
+                                "tipoVinculacionIntegrante",
+                                "facultadIntegrante",
+                                "departamentoIntegrante",
+                                "programaIntegrante"
                             ],
                             "filtrosDisponibles": [
                                 {
-                                    "nombre": "nombreCompletoDeIntegrante",
+                                    "nombre": "nombreIntegrante",
                                     "tipo": "input"
                                 },
                                 {
@@ -215,7 +145,7 @@
                                     "tipo": "input"
                                 },
                                 {
-                                    "nombre": "nombreGrupoDeInvestigacion",
+                                    "nombre": "nombreGrupo",
                                     "tipo": "input"
                                 },
                                 {
@@ -247,19 +177,19 @@
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "tipoVinculacion",
+                                    "nombre": "tipoVinculacionIntegrante",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "facultad",
+                                    "nombre": "facultadIntegrante",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "departamento",
+                                    "nombre": "departamentoIntegrante",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "programa",
+                                    "nombre": "programaIntegrante",
                                     "tipo": "combobox"
                                 }
                             ],
@@ -280,7 +210,7 @@
                                     "id": "integrantes_por_grupo",
                                     "titulo": "Total Integrantes por Grupo",
                                     "tipoGrafico": "CIRCULAR",
-                                    "campoAgrupacion": "nombreGrupoDeInvestigacion",
+                                    "campoAgrupacion": "nombreGrupo",
                                     "campoSerie": null,
                                     "filtroFijoClave": "estadoIntegranteGrupo",
                                     "filtroFijoValor": "ACTIVO",
@@ -291,7 +221,7 @@
                                     "id": "roles_por_facultad",
                                     "titulo": "Roles de Integrantes por Facultad",
                                     "tipoGrafico": "BARRAS_APILADAS",
-                                    "campoAgrupacion": "facultad",
+                                    "campoAgrupacion": "facultadIntegrante",
                                     "campoSerie": "historialRolesEnGrupo",
                                     "filtroFijoClave": "estadoIntegranteGrupo",
                                     "filtroFijoValor": "ACTIVO",
@@ -301,432 +231,304 @@
                                     "id": "vinculacion_por_grupo",
                                     "titulo": "Tipo de Vinculación por Grupo",
                                     "tipoGrafico": "BARRAS_APILADAS",
-                                    "campoAgrupacion": "nombreGrupoDeInvestigacion",
-                                    "campoSerie": "tipoVinculacion",
+                                    "campoAgrupacion": "nombreGrupo",
+                                    "campoSerie": "tipoVinculacionIntegrante",
                                     "filtroFijoClave": null,
                                     "filtroFijoValor": null
                                 }
                             ],
-                            "formato": [
-                                "Excel"
-                            ]
+                          "formato": [
+                            "Excel",
+                            "PDF"
+                          ]
                         },
                         {
-                            "id": 5,
-                            "codigo": "R05",
-                            "titulo": "Categorización Grupos de Investigación",
-                            "descripcion": "Listado de grupos con su respectiva categoría según Minciencias.",
-                            "columnasIncluidas": [
-                                "grupo",
-                                "categoria",
-                                "lider",
-                                "facultad"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "categoria",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 6,
-                            "codigo": "R06",
-                            "titulo": "Integrantes Grupos de Investigación",
-                            "descripcion": "Relación de investigadores asociados a cada grupo de investigación.",
-                            "columnasIncluidas": [
-                                "investigador",
-                                "grupo",
-                                "rol",
-                                "fechaIngreso"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "grupo",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel"
-                            ]
-                        },
-                        {
-                            "id": 7,
-                            "codigo": "R07",
-                            "titulo": "Categorización Investigadores Grupos",
-                            "descripcion": "Clasificación individual de los investigadores dentro de sus grupos respectivos.",
-                            "columnasIncluidas": [
-                                "investigador",
-                                "grupo",
-                                "categoria"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "categoria",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 8,
-                            "codigo": "R08",
+                            "id": 3,
+                            "codigo": "R03",
                             "titulo": "Proyectos Grupos de Investigación",
-                            "descripcion": "Proyectos activos, terminados y en formulación de los grupos de investigación.",
+                            "descripcion": "Directorio maestro de proyectos de investigación. Permite visualizar el estado técnico, cronogramas y vinculación institucional de cada proyecto aprobado o en proceso.",
                             "columnasIncluidas": [
-                                "proyecto",
-                                "estado",
-                                "grupo",
-                                "fechaInicio"
+                                "idProyecto",
+                                "tituloProyecto",
+                                "estadoProyecto",
+                                "fechaInicioProyecto",
+                                "fechaFinProyecto",
+                                "directorProyecto",
+                                "gruposInvestigacion",
+                                "facultadesProyecto",
+                                "departamentoDirector",
+                                "tipoProyecto",
+                                "nombreConvocatoria",
+                                "elementoMisional",
+                                "palabrasClaves"
                             ],
                             "filtrosDisponibles": [
                                 {
-                                    "nombre": "estado",
+                                    "nombre": "idProyecto",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "tituloProyecto",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "estadoProyecto",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "grupo",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 9,
-                            "codigo": "R09",
-                            "titulo": "Semillero de Investigación por Programa",
-                            "descripcion": "Semilleros activos y sus programas asociados.",
-                            "columnasIncluidas": [
-                                "nombreSemillero",
-                                "programa",
-                                "facultad"
-                            ],
-                            "filtrosDisponibles": [
+                                    "nombre": "fechaInicioProyectoDesde",
+                                    "tipo": "date"
+                                },
                                 {
-                                    "nombre": "facultad",
+                                    "nombre": "fechaFinProyectoHasta",
+                                    "tipo": "date"
+                                },
+                                {
+                                    "nombre": "directorProyecto",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "facultadesProyecto",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "programa",
+                                    "nombre": "departamentoDirector",
                                     "tipo": "combobox"
                                 },
                                 {
-                                    "nombre": "estado",
+                                    "nombre": "tipoProyecto",
                                     "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 10,
-                            "codigo": "R10",
-                            "titulo": "Actividad o Inactividad de Grupos de Investigación",
-                            "descripcion": "Reporte del estado operativo de los grupos de investigación en el último año.",
-                            "columnasIncluidas": [
-                                "grupo",
-                                "estado",
-                                "últimaActividad"
-                            ],
-                            "filtrosDisponibles": [
+                                },
                                 {
-                                    "nombre": "estado",
+                                    "nombre": "nombreConvocatoria",
+                                    "tipo": "input"
+                                },
+                                {
+                                    "nombre": "elementoMisional",
                                     "tipo": "combobox"
+                                },
+                                {
+                                    "nombre": "palabrasClaves",
+                                    "tipo": "input"
                                 }
                             ],
-                            "estadisticas": [],
+                            "configuracionFechas": [
+                                {
+                                    "tipo": "INTERVALO",
+                                    "columnaInicio": "fechaInicioProyecto",
+                                    "columnaFin": "fechaFinProyecto",
+                                    "filtroDesde": "fechaInicioProyectoDesde",
+                                    "filtroHasta": "fechaFinProyectoHasta"
+                                }
+                            ],
+                            "estadisticas": [
+                                {
+                                    "id": "proyectos_por_facultad",
+                                    "titulo": "Total Proyectos por Facultad",
+                                    "tipoGrafico": "CIRCULAR",
+                                    "campoAgrupacion": "facultadesProyecto",
+                                    "campoSerie": null,
+                                    "maxCategorias": 15
+                                },
+                                {
+                                    "id": "proyectos_por_departamento",
+                                    "titulo": "Total Proyectos por Departamento",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "departamentoDirector",
+                                    "campoSerie": null,
+                                    "maxCategorias": 20
+                                },
+                                {
+                                    "id": "proyectos_por_estado",
+                                    "titulo": "Estado General de los Proyectos",
+                                    "tipoGrafico": "CIRCULAR",
+                                    "campoAgrupacion": "estadoProyecto",
+                                    "campoSerie": null,
+                                    "maxCategorias": 10
+                                },
+                                {
+                                    "id": "proyectos_por_grupo",
+                                    "titulo": "Concentración de Proyectos por Grupo",
+                                    "tipoGrafico": "BARRAS_APILADAS",
+                                    "campoAgrupacion": "gruposInvestigacion",
+                                    "campoSerie": null,
+                                    "maxCategorias": 15
+                                }
+                            ],
                             "formato": [
                                 "Excel"
                             ]
                         },
                         {
-                            "id": 11,
-                            "codigo": "R11",
-                            "titulo": "Producción Científica por Grupo",
-                            "descripcion": "Listado de publicaciones, artículos y libros generados por cada grupo.",
-                            "columnasIncluidas": [
-                                "grupo",
-                                "tipoProduccion",
-                                "año"
-                            ],
-                            "filtrosDisponibles": [
+                          "id": 7,
+                          "codigo": "R07",
+                          "titulo": "Integrantes en Proyectos de Investigación",
+                          "descripcion": "Listado de participación de investigadores en los distintos proyectos.",
+                          "columnasIncluidas": [
+                            "numeroIdentificacion",
+                            "nombreIntegrante",
+                            "tituloProyecto",
+                            "idProyecto",
+                            "tipoProyecto",
+                            "fechaInicioProyecto",
+                            "fechaFinProyecto",
+                            "estadoProyecto",
+                            "fechasVinculacionRol",
+                            "historialRolesEnProyecto",
+                            "grupoInvestigacionVinculado",
+                            "semilleroInvestigacionVinculado",
+                            "nombreConvocatoria",
+                            "elementoMisional",
+                            "horasDedicacionSemanal",
+                            "facultadIntegrante",
+                            "departamentoIntegrante",
+                            "programaIntegrante"
+                          ],
+                          "filtrosDisponibles": [
+                            {
+                              "nombre": "nombreIntegrante",
+                              "tipo": "input"
+                            },
+                            {
+                              "nombre": "numeroIdentificacion",
+                              "tipo": "input"
+                            },
+                            {
+                              "nombre": "tituloProyecto",
+                              "tipo": "input"
+                            },
+                            {
+                              "nombre": "tipoProyecto",
+                              "tipo": "combobox"
+                            },
+                            {
+                              "nombre": "facultadIntegrante",
+                              "tipo": "combobox"
+                            }
+                          ],
+                          "estadisticas": [],
+                          "formato": ["Excel"],
+                          "consultasAdicionales": {
+                            "certificado": {
+                              "formato": "PDF",
+                              "reporte": "R07-C",
+                              "consultas": [
                                 {
-                                    "nombre": "año",
-                                    "tipo": "combobox"
+                                  "llaveJasper": "DetalleIntegrante",
+                                  "tipoConsulta": "DETALLE_INTEGRANTE_PROYECTO",
+                                  "campoFiltro": "numeroIdentificacion",
+                                  "endpoint": "/reportes-estadisticos/data-adicional/DETALLE_INTEGRANTE_PROYECTO",
+                                  "parametroQuery": "valorFiltro"
                                 }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
+                              ]
+                            }
+                          }
                         },
                         {
-                            "id": 12,
-                            "codigo": "R12",
-                            "titulo": "Eventos Académicos y Científicos",
-                            "descripcion": "Eventos organizados y participaciones de los grupos de investigación.",
-                            "columnasIncluidas": [
-                                "evento",
-                                "grupo",
-                                "tipo",
-                                "año"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "año",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "PDF"
-                            ]
+                        "id": 991,
+                        "codigo": "R01-2",
+                        "titulo": "Semillero de Investigación por Programa",
+                        "descripcion": "Muestra los semilleros de investigación registrados en el sistema, agrupados por programa académico y sus datos asociados.",
+                        "columnasIncluidas": [
+                        "idSemillero",
+                        "nombreSemilleroInvestigacion",
+                        "mentorSemillero",
+                        "coordinadorSemillero",
+                        "correoMentorSemillero",
+                        "correoSemilleroInvestigacion",
+                        "facultad",
+                        "programa",
+                        "departamento",
+                        "lineasInvestigacion",
+                        "objetivoSemillero",
+                        "disciplina",
+                        "fechaInicio",
+                        "fechaFin"
+                        ],
+                        "filtrosDisponibles": [
+                        {
+                        "nombre": "idSemillero",
+                        "tipo": "input"
                         },
                         {
-                            "id": 13,
-                            "codigo": "R13",
-                            "titulo": "Convenios de Investigación",
-                            "descripcion": "Listado de convenios y alianzas interinstitucionales vigentes.",
+                        "nombre": "nombreSemilleroInvestigacion",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "mentorSemillero",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "coordinadorSemillero",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "correoMentorSemillero",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "correoSemilleroInvestigacion",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "facultad",
+                        "tipo": "combobox"
+                        },
+                        {
+                        "nombre": "programa",
+                        "tipo": "combobox"
+                        },
+                        {
+                        "nombre": "departamento",
+                        "tipo": "combobox"
+                        },
+                        {
+                        "nombre": "lineasInvestigacion",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "objetivoSemillero",
+                        "tipo": "input"
+                        },
+                        {
+                        "nombre": "disciplina",
+                        "tipo": "combobox"
+                        },
+                        {
+                        "nombre": "fechaInicio",
+                        "tipo": "date"
+                        },
+                        {
+                        "nombre": "fechaFin",
+                        "tipo": "date"
+                        }
+                        ],
+                        "estadisticas": [],
+                        "formato": [
+                        "Excel",
+                        "PDF"
+                        ]
+                        },
+                        {
+                            "id": 992,
+                            "codigo": "R03-2",
+                            "titulo": "Categorización de Investigadores",
+                            "descripcion": "Clasificación de los investigadores según su nivel de categorización Colciencias.",
                             "columnasIncluidas": [
                                 "nombre",
-                                "institucion",
-                                "valor",
-                                "fechaFin"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "institucion",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel"
-                            ]
-                        },
-                        {
-                            "id": 14,
-                            "codigo": "R14",
-                            "titulo": "Proyectos Financiados Externamente",
-                            "descripcion": "Relación de proyectos con financiación externa o cofinanciación.",
-                            "columnasIncluidas": [
-                                "proyecto",
-                                "financiador",
-                                "monto"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "financiador",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 15,
-                            "codigo": "R15",
-                            "titulo": "Indicadores de Producción Académica",
-                            "descripcion": "Indicadores cuantitativos de la producción científica anual.",
-                            "columnasIncluidas": [
-                                "año",
-                                "produccionesTotales",
-                                "impacto"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "año",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 16,
-                            "codigo": "R16",
-                            "titulo": "Movilidad Académica",
-                            "descripcion": "Movilidad de docentes e investigadores en actividades nacionales e internacionales.",
-                            "columnasIncluidas": [
-                                "persona",
-                                "destino",
-                                "fecha"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "pais",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel"
-                            ]
-                        },
-                        {
-                            "id": 17,
-                            "codigo": "R17",
-                            "titulo": "Reconocimientos y Premios",
-                            "descripcion": "Premios, menciones y reconocimientos otorgados a grupos e investigadores.",
-                            "columnasIncluidas": [
-                                "premio",
-                                "investigador",
-                                "año"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "año",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 18,
-                            "codigo": "R18",
-                            "titulo": "Participación en Redes de Conocimiento",
-                            "descripcion": "Redes de cooperación e intercambio científico donde participa la institución.",
-                            "columnasIncluidas": [
-                                "red",
+                                "categoria",
                                 "grupo",
-                                "nivelParticipacion"
+                                "ultActualizacion"
                             ],
                             "filtrosDisponibles": [
                                 {
-                                    "nombre": "red",
+                                    "nombre": "categoria",
                                     "tipo": "combobox"
                                 }
                             ],
                             "estadisticas": [],
                             "formato": [
                                 "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 19,
-                            "codigo": "R19",
-                            "titulo": "Producción de Innovación y Patentes",
-                            "descripcion": "Listado de desarrollos tecnológicos y patentes registradas por los grupos.",
-                            "columnasIncluidas": [
-                                "patente",
-                                "año",
-                                "grupo"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "año",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel"
-                            ]
-                        },
-                        {
-                            "id": 20,
-                            "codigo": "R20",
-                            "titulo": "Proyectos en Ejecución",
-                            "descripcion": "Relación de proyectos de investigación actualmente en ejecución.",
-                            "columnasIncluidas": [
-                                "proyecto",
-                                "grupo",
-                                "avance"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "grupo",
-                                    "tipo": "combobox"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
-                                "Excel",
-                                "PDF"
-                            ]
-                        },
-                        {
-                            "id": 21,
-                            "codigo": "VIG",
-                            "titulo": "Certificación de Vigencia de Contrato, Convenio o Proyecto",
-                            "descripcion": "Genera una certificación con la información de vigencia de un contrato, convenio o proyecto, incluyendo sus fechas de inicio y finalización y el director o coordinador responsable.",
-                            "columnasIncluidas": [
-                                "titulo",
-                                "idproyecto",
-                                "diaini",
-                                "mesini",
-                                "anioini",
-                                "diafin",
-                                "mesfin",
-                                "aniofin",
-                                "director"
-                            ],
-                            "filtrosDisponibles": [
-                                {
-                                    "nombre": "idproyecto",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "titulo",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "director",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "diaini",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "mesini",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "anioini",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "diafin",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "mesfin",
-                                    "tipo": "input"
-                                },
-                                {
-                                    "nombre": "aniofin",
-                                    "tipo": "input"
-                                }
-                            ],
-                            "estadisticas": [],
-                            "formato": [
                                 "PDF"
                             ]
                         }
